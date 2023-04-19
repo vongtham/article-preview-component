@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --blue-700: hsl(217, 19%, 35%);
+    --blue-400: hsl(214, 17%, 51%);
+    --gray-blue-200: hsl(212, 23%, 69%);
+    --gray-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.813rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-blue);
+}
+
+.card {
+    width: min(90%, 700px);
+    margin: 3rem auto;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.container {
+    width: min(85%, 450px);
+    margin: 0 auto;
+}
+
+.hero {
+    object-fit: cover;
+    object-position: left;
+    height: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: var(--blue-700);
+    padding-top: 2rem;
+}
+
+.detail {
+    color: var(--blue-400);
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.flex-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-group > img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.artist {
+    padding: 0.5rem 0;
+}
+
+.artist-info {
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+span {
+    display: block;
+}
+
+span:first-child{
+    font-weight: 700;
+    color: var(--blue-700)
+}
+
+span:last-child{
+    color: var(--gray-blue-200);
+}
+
+.btn-share {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    z-index: 99;
+    background-color: var(--gray-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-share {
+    color: var(--blue-400);
+}
+
+.btn-share:hover {
+    background-color: var(--gray-blue-200);
+    cursor: pointer;
+}
+
+.btn-share:hover .fa-share {
+    color: #fff;
+}
+
+.box-share {
+    background-color: var(--blue-700);
+    position: absolute;
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    bottom: 0;
+    display: block;
+}
+
+.container-share{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 0;
+}
+
+.share {
+    color: var(--gray-blue-200);
+    letter-spacing: 0.3rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px){
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .hero {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .box-share {
+        bottom: 28%;
+        right: -11%;
+        width: 35%;
+        border-radius: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .box-share::after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: var(--blue-700);
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        rotate: 45deg;
+    }
+
+    .container-share {
+        justify-content: center;
+    }
+
+}
+
